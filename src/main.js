@@ -11,7 +11,6 @@ class App {
     this.founded = [];
     this.formulario = null;
     this.inputNombre = null;
-    this.isActive = null;
     this.init();
   }
 
@@ -50,20 +49,15 @@ class App {
         </div>
       </nav>
       <div class="container">
-        <h1>Lista de prioridad</h1>
-        <p style="margin-bottom: 20px;">
-          Ordenada de orden en que llegan las operarios.  
-        </p>
+        <h4 style="grid-column: 1/8;">Lista de prioridad</h4>
+        
 
+        <h4 style="grid-column: 8/8;">Maquinas Atrasadas</h4>
+        <div style="grid-column: 8/8; align-items: flex-start; flex-wrap: wrap; justify-content: center;" class="flex flex-gap" id="maquinas"></div>
 
-        <h4>Maquinas</h4>
-        <div class="flex flex-gap" id="maquinas"></div>
+        <ul style="grid-column: 1/8; margin: 0 1rem;" class="priority-list list-group"></ul>
 
-
-        <h4>Salidas</h4>
-        <ul class="priority-list list-group" style="margin:0 10px;"></ul>
-
-        <form id="formulario" class="formulario">
+        <form style="grid-column: 1/8;" id="formulario" class="formulario">
           <div class="form-group position-relative ">
             <input type="text" class="form-control" id="nombre" placeholder="Nombre del operario" autocomplete="off" autofocus required> 
             <div class="form-dropdow position-absolute top-full">
@@ -95,14 +89,14 @@ class App {
           maquina.status === "atrasada" || maquina.status === "mantenimiento"
         );
       })
-      .slice(0, 4) // Limita a las 3 primeras maquinas
+      .slice(0, 4)
       .map((maquina) => {
         return `
           <div class="card position-relative" >
-            <div class="badge position-absolute bg-danger" style="border-radius: 40px; top: -10px; right: -10px; z-index: 1; padding: 2px 7px;">
+            <div class="badge position-absolute bg-danger" style="border-radius: 40px; top: -10px; right: -10px; z-index: 1; padding: 0 10px;">
               ${maquina.status === "atrasada" ? "Atrasada" : maquina.status}
             </div>
-            <div class="card-body" style="font-size: .9rem;">
+            <div class="card-body">
               <strong>Maquina: ${maquina.name}</strong>
               <span>${
                 usuarios
@@ -127,7 +121,7 @@ class App {
 
         return `
         <li class="list-group-item">
-           ${i + 1} - <a href="#" class="operario">${
+          <span>${i + 1}</span> - <a href="#" class="operario">${
           item.priority ? item.name : ""
         }</a>
         </li>`;
@@ -179,7 +173,6 @@ class App {
 
       if (user) {
         localStorage.setItem("activeUser", JSON.stringify(user));
-        this.isActive = user;
         alert.show("Inicio de sesión exitoso.", "success");
         this.app.querySelector(".collapse").classList.remove("show");
         window.location.href = "src/operario.html";

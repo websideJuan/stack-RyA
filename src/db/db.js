@@ -63,3 +63,10 @@ export const db = new DB();
 
 // db.add('usuarios', { name: 'Juan', age: 30 });
 // db.add('usuarios', { name: 'Maria', age: 25 });
+
+// db.update('usuarios', { id: 'some-id', name: 'Juan Updated' });
+// console.log(db.get('usuarios'));
+// db.delete('usuarios', 'some-id');
+// db.clear('usuarios');
+// console.log(db.get('usuarios'));
+// db.add('operarios', { name: 'Aldo', maquina: '67', password: 'pas1234*' });
