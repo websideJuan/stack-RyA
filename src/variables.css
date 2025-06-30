@@ -1,0 +1,25 @@
+:root {
+  --color-primary: #4a90e2;
+  --color-secondary: #50e3c2;
+  --color-background: #caced3;
+  --color-danger: rgb(233, 78, 119, var(--opacity, 1));
+  --color-success: #7ed321;
+  --color-warning: #f8e71c;
+  --color-info: #f5a623;
+  --color-bg-light: #f4f4f4;
+  --color-text: #333;
+  --color-text-contrast: #ffffff;
+  --color-card-bg: #ffffff;
+  --color-border: #dddddd;
+  --font-family: 'Arial', sans-serif;
+  --weight-300: 300;
+  --weight-400: 400;
+  --weight-600: 600;
+  --font-size-base: 13px;
+  --line-height-base: 1.5;
+  --border-radius: 4px;
+  --shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  color: var(--color-text);
+}
