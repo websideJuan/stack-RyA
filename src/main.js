@@ -65,7 +65,7 @@ class App {
 
         <form id="formulario" class="formulario">
           <div class="form-group position-relative ">
-            <input type="text" class="form-control" id="nombre" placeholder="Nombre del operario" autocomplete="off" required> 
+            <input type="text" class="form-control" id="nombre" placeholder="Nombre del operario" autocomplete="off" autofocus required> 
             <div class="form-dropdow position-absolute top-full">
               <ul class="list-group mt-3" id="listOfCoincidences"></li>
             </div>
@@ -256,9 +256,18 @@ class App {
   }
 
   listenner() {
-    this.formulario.addEventListener("submit", (e) => this.handleSubmit(e));
+    this.formulario.addEventListener("submit", (e) => this.handlerSubmit(e));
     this.inputNombre.addEventListener("input", (e) => this.handlerChange(e));
     this.app.addEventListener("click", (e) => this.handlerClick(e));
+    this.app.addEventListener("resize", (e) => {
+      console.log('event resize', e.target);
+      const collapse = this.app.querySelector(".menu-collapse");
+      if (collapse) {
+        collapse.classList.remove("show");
+        collapse.setAttribute("data-collapse", "false");
+        
+      }
+    });
   }
 }
 

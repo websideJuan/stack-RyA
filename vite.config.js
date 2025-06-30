@@ -2,6 +2,7 @@ import { defineConfig } from "vite";
 import { resolve } from "path";
 
 export default defineConfig({
+  base: "/stack-RyA/",
   build: {
     rollupOptions: {
       input: {

@@ -7,7 +7,7 @@
   --color-warning: #f8e71c;
   --color-info: #f5a623;
   --color-bg-light: #f4f4f4;
-  --color-text: #333;
+  --color-text: #333333c9;
   --color-text-contrast: #ffffff;
   --color-card-bg: #ffffff;
   --color-border: #dddddd;
@@ -15,7 +15,7 @@
   --weight-300: 300;
   --weight-400: 400;
   --weight-600: 600;
-  --font-size-base: 13px;
+  --font-size-base: 14px;
   --line-height-base: 1.5;
   --border-radius: 4px;
   --shadow: 0 2px 4px rgba(0, 0, 0, 0.1);

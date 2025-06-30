@@ -80,21 +80,23 @@ export class Operarios extends Usuarios {
 // usuariosTest(); // Descomentar para probar la funcionalidad
 
 
-const operarios = [
-  {name: 'Juan', maquina: '45', password: 'pas1234*'},
-  {name: 'Aldo', maquina: '67', password: 'pas1234*'},
-  {name: 'José', maquina: '59', password: 'pas1234*'},
-  {name: 'Victor', maquina: '54', password: 'pas1234*'},
-  {name: 'Juan T', maquina: '74', password: 'pas1234*'},
-  {name: 'Joan', maquina: '59', password: 'pas1234*'},
-  {name: 'Juan O', maquina: '69', password: 'pas1234*'},
-  {name: 'Jaime', maquina: '78', password: 'pas1234*'},
-  {name: 'Daniel C', maquina: '89', password: 'pas1234*'},
-]
+if (usuarios.getAll().length === 0) {
+  console.warn('No hay usuarios registrados. Agregando usuarios de prueba...');
+  const operarios = [
+    {name: 'Juan', maquina: '45', password: 'pas1234*'},
+    {name: 'Aldo', maquina: '67', password: 'pas1234*'},
+    {name: 'José', maquina: '59', password: 'pas1234*'},
+    {name: 'Victor', maquina: '54', password: 'pas1234*'},
+    {name: 'Juan T', maquina: '74', password: 'pas1234*'},
+    {name: 'Joan', maquina: '59', password: 'pas1234*'},
+    {name: 'Juan O', maquina: '69', password: 'pas1234*'},
+    {name: 'Jaime', maquina: '78', password: 'pas1234*'},
+    {name: 'Daniel C', maquina: '89', password: 'pas1234*'},
+  ]
 
-usuarios.clear();
-usuarios.addAll(operarios);
-
+  usuarios.clear();
+  usuarios.addAll(operarios);
+}
 // const dataOperarios = operarios.map(usuario => {
 //   usuario.id = window.crypto.randomUUID(); // Genera un id único
 //   return {

@@ -73,96 +73,98 @@ export const maquinas = new Maquinas({ db: db });
 // maquinas.addAll([{ name: 'Maquina 2', status: 'en mantenimiento' }, { name: 'Maquina 3', status: 'inactiva' }]);
 // console.log(maquinas.getAll());
 
-const maquinasDataTest = [
-  {
-    name: "45",
-    tipo: "Horquilla",
-    toneladas: 3,
-    status: "atrasada",
-    revision: "2023-10-01",
-  },
-  {
-    name: "67",
-    tipo: "Horquilla",
-    toneladas: 3,
-    status: "en mantenimiento",
-    revision: "2023-10-05",
-  },
-  {
-    name: "69",
-    tipo: "Horquilla",
-    toneladas: 2.5,
-    status: "atrasada",
-    revision: "2023-10-10",
-  },
-  {
-    name: "59",
-    tipo: "Horquilla",
-    toneladas: 3,
-    status: "Activa",
-    revision: "2023-10-01",
-  },
-  {
-    name: "74",
-    tipo: "Horquilla",
-    toneladas: 3,
-    status: "Activa",
-    revision: "2023-10-01",
-  },
-  {
-    name: "89",
-    tipo: "Horquilla",
-    toneladas: 3,
-    status: "Activa",
-    revision: "2023-10-01",
-  },
-  {
-    name: "65",
-    tipo: "Horquilla",
-    toneladas: 3,
-    status: "Activa",
-    revision: "2023-10-01",
-  },
-  {
-    name: "44",
-    tipo: "Horquilla",
-    toneladas: 3,
-    status: "Activa",
-    revision: "2023-10-01",
-  },
-  {
-    name: "90",
-    tipo: "Horquilla",
-    toneladas: 3,
-    status: "Activa",
-    revision: "2023-10-01",
-  },
-  {
-    name: "51",
-    tipo: "Horquilla",
-    toneladas: 5,
-    status: "Activa",
-    revision: "2023-10-01",
-  },
-  {
-    name: "70",
-    tipo: "Horquilla",
-    toneladas: 7,
-    status: "Activa",
-    revision: "2023-10-01",
-  },
-  {
-    name: "00",
-    tipo: "Horquilla",
-    toneladas: 7,
-    status: "Activa",
-    revision: "2023-10-01",
-  },
-];
 
-maquinas.clear();
-maquinas.addAll(maquinasDataTest);
+if (maquinas.getAll().length === 0) {
+  const maquinasDataTest = [
+    {
+      name: "45",
+      tipo: "Horquilla",
+      toneladas: 3,
+      status: "atrasada",
+      revision: "2023-10-01",
+    },
+    {
+      name: "67",
+      tipo: "Horquilla",
+      toneladas: 3,
+      status: "en mantenimiento",
+      revision: "2023-10-05",
+    },
+    {
+      name: "69",
+      tipo: "Horquilla",
+      toneladas: 2.5,
+      status: "atrasada",
+      revision: "2023-10-10",
+    },
+    {
+      name: "59",
+      tipo: "Horquilla",
+      toneladas: 3,
+      status: "Activa",
+      revision: "2023-10-01",
+    },
+    {
+      name: "74",
+      tipo: "Horquilla",
+      toneladas: 3,
+      status: "Activa",
+      revision: "2023-10-01",
+    },
+    {
+      name: "89",
+      tipo: "Horquilla",
+      toneladas: 3,
+      status: "Activa",
+      revision: "2023-10-01",
+    },
+    {
+      name: "65",
+      tipo: "Horquilla",
+      toneladas: 3,
+      status: "Activa",
+      revision: "2023-10-01",
+    },
+    {
+      name: "44",
+      tipo: "Horquilla",
+      toneladas: 3,
+      status: "Activa",
+      revision: "2023-10-01",
+    },
+    {
+      name: "90",
+      tipo: "Horquilla",
+      toneladas: 3,
+      status: "Activa",
+      revision: "2023-10-01",
+    },
+    {
+      name: "51",
+      tipo: "Horquilla",
+      toneladas: 5,
+      status: "Activa",
+      revision: "2023-10-01",
+    },
+    {
+      name: "70",
+      tipo: "Horquilla",
+      toneladas: 7,
+      status: "Activa",
+      revision: "2023-10-01",
+    },
+    {
+      name: "00",
+      tipo: "Horquilla",
+      toneladas: 7,
+      status: "Activa",
+      revision: "2023-10-01",
+    },
+  ];
 
+  maquinas.clear();
+  maquinas.addAll(maquinasDataTest);
+}
 // console.log(maquinas.getAll());
 // console.log(maquinas.getById('some-id'));
 
